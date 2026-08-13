@@ -13,7 +13,19 @@ enum Status {
 }
 
 model Category {
-  id     Int    @id @default(autoincrement())
-  name   String
-  status Status @default(active)
+  id       Int       @id @default(autoincrement())
+  name     String
+  status   Status    @default(active)
+  products Product[] @relation("CategoryToProduct")
+
+  @@map("categories")
+}
+
+model Product {
+  id         Int        @id @default(autoincrement())
+  name       String
+  price      Float
+  categories Category[] @relation("CategoryToProduct")
+
+  @@map("products")
 }
