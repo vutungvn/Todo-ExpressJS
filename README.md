@@ -7,7 +7,7 @@ Dự án API RESTful quản lý sản phẩm và danh mục theo kiến trúc MV
 - [x] **Bước 1**: Khởi tạo dự án Node.js & Git, cài đặt Express, Prisma Client, dotenv, cors.
 - [x] **Bước 2**: Khởi tạo Prisma, cấu hình biến môi trường kết nối CSDL MySQL.
 - [x] **Bước 3**: Thiết lập Prisma Schema (Model Category, Product với quan hệ N-N) và chạy Migration.
-- [x] **Bước 4**: Tạo file khởi tạo Prisma Client instance (`src/config/prisma.js`).
+- [x] **Bước 4**: Tạo file khởi tạo Prisma Client instance (`db.js`).
 - [x] **Bước 5**: Xây dựng MVC Module Danh mục (Category Controller & Routes):
   - [x] Thêm mới danh mục.
   - [x] Sửa danh mục.
