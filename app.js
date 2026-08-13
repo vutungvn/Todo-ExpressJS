@@ -6,11 +6,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-console.log("PORT", process.env.PORT);
 
 app.use(express.json());
 
-// Route đăng ký API
+// Category Routes
 app.use("/api/categories", categoryRoutes);
 
 app.listen(PORT, () => {

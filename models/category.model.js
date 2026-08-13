@@ -13,4 +13,13 @@ export const categoryModel = {
       },
     });
   },
+
+  create: async ({ name, status }) => {
+    return prisma.category.create({
+      data: {
+        name,
+        status,
+      },
+    });
+  },
 };
