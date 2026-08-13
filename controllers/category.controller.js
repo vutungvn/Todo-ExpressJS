@@ -1,3 +1,5 @@
+import prisma from "../config/db.js";
+
 export const getCategories = async (req, res) => {
-  console.log("req", req);
+  console.log("prisma", prisma);
 };
