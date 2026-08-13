@@ -22,4 +22,16 @@ export const categoryModel = {
       },
     });
   },
+
+  update: async (id, { name, status }) => {
+    return await prisma.category.update({
+      where: {
+        id: +id,
+      },
+      data: {
+        name,
+        status,
+      },
+    });
+  },
 };

@@ -29,3 +29,16 @@ export const createCategoty = async (req, res) => {
     res.status(500).json({ status: "error", message: error.message });
   }
 };
+
+export const updateCategory = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, status } = req.body;
+
+    const category = await categoryModel.update(id, { name, status });
+
+    res.json({ status: "success", data: category });
+  } catch (error) {
+    res.status(500).json({ status: "error", message: error.message });
+  }
+};
