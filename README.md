@@ -18,4 +18,4 @@ Dự án API RESTful quản lý sản phẩm và danh mục theo kiến trúc MV
   - [x] Sửa sản phẩm.
   - [x] Xóa sản phẩm.
   - [x] Lấy danh sách sản phẩm (Hỗ trợ Search theo tên & Phân trang Page/Limit).
-- [x] **Bước 7**: Cấu hình Entry Point `src/app.js` tích hợp toàn bộ Routes.
+- [x] **Bước 7**: Cấu hình Entry Point `app.js` tích hợp toàn bộ Routes.

@@ -1,7 +1,16 @@
-// import prisma from '../config/db.js'
+import prisma from "../config/db.js";
 
-// export default categoryModel = {
-//     findAll: async () =>  {
-//         return await
-//     }
-// }
+export const categoryModel = {
+  findAll: async (search) => {
+    return await prisma.category.findMany({
+      where: {
+        name: {
+          contains: search,
+        },
+      },
+      include: {
+        products: true,
+      },
+    });
+  },
+};
