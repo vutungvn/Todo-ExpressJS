@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum Status {
+  active
+  inactive
+}
+
+model Category {
+  id     Int    @id @default(autoincrement())
+  name   String
+  status Status @default(active)
+}
