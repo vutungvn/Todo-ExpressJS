@@ -34,4 +34,12 @@ export const categoryModel = {
       },
     });
   },
+
+  delete: async (id) => {
+    return await prisma.category.delete({
+      where: {
+        id: +id,
+      },
+    });
+  },
 };
