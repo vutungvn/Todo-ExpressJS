@@ -14,6 +14,12 @@ export const categoryModel = {
     });
   },
 
+  findById: async (id) => {
+    return await prisma.category.findUnique({
+      where: { id: +id },
+    });
+  },
+
   create: async ({ name, status }) => {
     return prisma.category.create({
       data: {
